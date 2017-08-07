@@ -1,0 +1,22 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+$config = array(
+	'addnew' => array(
+					array(
+						'field' => 'accno',
+						'label' => 'Account Number',
+						'rules' => 'required|callback_checkAccNo|is_unique[accounts.acc_no]'
+						),
+					array(
+						'field' => 'accname',
+						'label' => 'Account Name',
+						'rules' => 'required|strtoupper'
+						),
+					array(
+						'field' => 'balance',
+						'label' => 'Balance',
+						'rules' => 'required|is_numeric|greater_than[499]'
+						)
+					)
+
+	);
